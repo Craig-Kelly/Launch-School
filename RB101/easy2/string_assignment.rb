@@ -23,6 +23,12 @@ What does this print out? Can you explain these results?
 
 =end
 
-p "Prints Alice, then Bob"
+name = 'Bob'
+save_name = name
+name = 'Alice'
+puts name, save_name # prints Alice then Bob
 
-p "pritns BOB and BOB"
+name = 'Bob'
+save_name = name
+name.upcase!
+puts name, save_name #prints BOB then BOB
