@@ -1,5 +1,3 @@
-require "pry"
-
 vehicles = [
   'car', 'car', 'truck', 'car', 'SUV', 'truck',
   'motorcycle', 'motorcycle', 'car', 'truck',
