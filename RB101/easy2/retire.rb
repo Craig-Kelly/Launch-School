@@ -3,10 +3,13 @@
 p "How old are you?"
 age = gets.chomp.to_i
 
- p "When do you want to retire?"
- retire = gets.chomp.to_i
+p "When do you want to retire?"
+retirement = gets.chomp.to_i
 
- year = 2019 + (age - retire)
+current_year = Time.now.year
 
-  p "It's 2019. You will retire in 2056.
- You have only 40 years of work to go!
+years = (retirement - age)
+
+result = years + current_year
+
+puts  "It's #{current_year}. You will retire in #{result}. You have only #{years} years of work to go!"
