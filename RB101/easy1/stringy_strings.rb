@@ -1,9 +1,19 @@
 #Work in progress
 
+require 'pry'
+
 def stringy(int)
-  int.each{p "1"}
+  ary = []
+
+  int.times do |int|
+    number = int.even? ? 1 : 0
+    ary << number
+  end
+
+ary.join
 end
 
+stringy(7)
 stringy(6)
 
 
