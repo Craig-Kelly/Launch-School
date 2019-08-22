@@ -18,10 +18,13 @@ output:
 There are 13 characters in "walk, don't run".
 
 =end
+require 'pry'
+
 
 p "type some words"
 input = gets.chomp
 
-count = input.gsub(/[' ']/, '').split('').count
+
+count = input.gsub(/[" "]/, '').split('').count
 
 p "There are #{count} characters in '#{input}'"
