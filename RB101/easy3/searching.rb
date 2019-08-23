@@ -36,3 +36,23 @@ The number 17 appears in [25, 15, 20, 17, 23].
 The number 18 does not appear in [25, 15, 20, 17, 23].
 
 =end
+require 'pry'
+
+count = 1
+arr = []
+
+loop do
+p "Enter the #{count}th number:"
+input = gets.chomp.to_i
+arr << input
+count += 1
+break if count == 7
+end
+
+key = arr.pop
+
+if arr.include?(key)
+  p "The number #{key} appears in #{arr}"
+else
+  p "The number #{key} does not appear in #{arr}"
+end
