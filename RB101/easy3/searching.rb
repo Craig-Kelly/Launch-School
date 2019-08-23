@@ -42,11 +42,11 @@ count = 1
 arr = []
 
 loop do
-p "Enter the #{count}th number:"
-input = gets.chomp.to_i
-arr << input
-count += 1
-break if count == 7
+  p "Enter the #{count}th number:"
+  input = gets.chomp.to_i
+  arr << input
+  count += 1
+  break if count == 7
 end
 
 key = arr.pop
