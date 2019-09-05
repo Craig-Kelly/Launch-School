@@ -22,7 +22,7 @@ string_to_signed_integer('-570') == -570
 string_to_signed_integer('+100') == 100
 
 =end
-require 'pry'
+
 
 def string_to_integer(str)
   str
@@ -36,11 +36,13 @@ end
 
 def string_to_signed_integer(str)
   if str.start_with?('+')
-    p string_to_integer(str)
+    str = str[1..str.length]
+    string_to_integer(str)
   elsif str.start_with?('-')
-    p string_to_integer(str)
+    str = str[1..str.length]
+    string_to_integer(str) * -1
   else
-    p string_to_integer(str)
+    string_to_integer(str)
 end
 end
 
