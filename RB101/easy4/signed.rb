@@ -43,7 +43,7 @@ def string_to_signed_integer(str)
     string_to_integer(str) * -1
   else
     string_to_integer(str)
-end
+  end
 end
 
 p string_to_signed_integer('4321') == 4321

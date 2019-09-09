@@ -1,15 +1,12 @@
-DIGITS = {
-  '0' => 0, '1' => 1, '2' => 2, '3' => 3, '4' => 4,
-  '5' => 5, '6' => 6, '7' => 7, '8' => 8, '9' => 9
+
+               static VALUE
+int_to_s(int argc, VALUE *argv, VALUE x)
+{
+    int base;
+
+    if (rb_check_arity(argc, 0, 1))
+        base = NUM2INT(argv[0]);
+    else
+        base = 10;
+    return rb_int2str(x, base);
 }
-
-def string_to_integer(string)
-  digits = string.chars.map { |char| DIGITS[char] }
-
-  value = 0
-  digits.each { |digit| value = 10 * value + digit }
-  value
-end
-
-p string_to_integer('') == 0
-p string_to_integer('570') == 570
