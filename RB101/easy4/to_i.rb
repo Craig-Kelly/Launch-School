@@ -20,12 +20,11 @@ require 'minitest/autorun'
 
 def string_to_integer(str)
   str
-  .split('')
-  .map{|x| x.ord - 48}
-  .reverse
-  .map
-  .with_index{|x, i| x * (10**i)}
-  .inject(:+)
+    .split('')
+    .map { |x| x.ord - 48 }
+    .reverse
+    .map.with_index { |x, i| x * (10**i) }
+    .inject(:+)
 end
 
 class StringToIntegerTest < Minitest::Test

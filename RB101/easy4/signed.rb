@@ -23,26 +23,28 @@ string_to_signed_integer('+100') == 100
 
 =end
 
+ORDINAL_ZERO = 48 # '0'.to_i
 
-def string_to_integer(str)
-  str
-  .split('')
-  .map{|x| x.ord - 48}
-  .reverse
-  .map
-  .with_index{|x, i| x * (10**i)}
-  .inject(:+)
+
+def string_to_integer(string)
+  string
+    .split('')
+    .map { |x| x.ord - ORDINAL_ZERO }
+    .reverse
+    .map
+    .with_index { |x, i| x * (10**i) }
+    .inject(:+)
 end
 
-def string_to_signed_integer(str)
-  if str.start_with?('+')
-    str = str[1..str.length]
-    string_to_integer(str)
-  elsif str.start_with?('-')
-    str = str[1..str.length]
-    string_to_integer(str) * -1
+def string_to_signed_integer(string)
+  if string.start_with?('+')
+    string = string[1..string.length]
+    string_to_integer(string)
+  elsif string.start_with?('-')
+    string = string[1..string.length]
+    string_to_integer(string) * -1
   else
-    string_to_integer(str)
+    string_to_integer(string)
   end
 end
 
