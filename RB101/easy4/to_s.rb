@@ -1,7 +1,5 @@
 =begin
 
-
-
 Convert a Number to a String!
 In the previous two exercises, you developed methods that convert simple numeric strings to signed Integers. In this exercise and the next, you're going to reverse those methods.
 
