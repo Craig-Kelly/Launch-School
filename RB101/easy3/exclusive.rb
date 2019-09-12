@@ -21,7 +21,11 @@ xor?(5.even?, 4.odd?) == false
 
 def xor?(a, b)
 
-
+  if a && b && a || b 
+    true
+  else
+    false
+  end
 
 end
 
