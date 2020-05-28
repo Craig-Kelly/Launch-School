@@ -20,13 +20,15 @@ xor?(5.even?, 4.odd?) == false
 =end
 
 def xor?(a, b)
-
-  if a && b && a || b 
+  if a && b
+    false
+  elsif a
+    true
+  elsif b
     true
   else
     false
   end
-
 end
 
 p xor?(5.even?, 4.even?) == true
