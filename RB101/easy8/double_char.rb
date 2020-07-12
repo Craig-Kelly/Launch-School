@@ -12,8 +12,6 @@
 # Push to new string
 # Return new string
 
-require 'pry'
-
 def repeater(str)
   double = ''
   counter = 0

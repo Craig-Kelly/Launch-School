@@ -4,8 +4,6 @@ type: ruby
 
 up:
   - homebrew:
-    - openssl
-    # - another_package
   - ruby: 2.6.3
   - bundler
 
